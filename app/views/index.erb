@@ -1,0 +1,38 @@
+<style type="text/css">
+  .container {
+    margin: 20px auto;
+    width: 600px;
+    padding: 0px 20px 20px 20px;
+    border: 1px dotted black;
+  }
+  th {
+    text-align: left;
+  }
+</style>
+
+<div class="container">
+  <h1>Welcome to my App!</h1>
+  <p>Post</p>
+  <form action="/post_cool_url" method="post">
+    
+    Enter url: <input type="text" name="input_text"></br>
+    Checkbox: <input type="checkbox" name="vehicle" value="Bike"></br>
+    Radio Activity!: <input type="radio" name="sex" value="female"></br>
+    <textarea name="text_box"></textarea></br>
+    <input type="submit" value="Submit">
+  </form>
+  <p>Post</p>
+  <form action="/get_cool_url" method="get">
+    Enter url: <input type="text" name="post[text]"></br>
+    Checkbox: <input type="checkbox" name="post[type]" value="Bike"></br>
+    Radio Activity!: <input type="radio" name="post[price]" value="female"></br>
+    <textarea name="text_box"></textarea></br>
+    <input type="submit" value="Submit">
+  </form>
+
+</div>
+
+<form action="/delete" method="post">
+  <input type="hidden" name="_method" value="delete">   
+  <input type="submit" value="Delete">
+</form>
