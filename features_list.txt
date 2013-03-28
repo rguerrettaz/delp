@@ -1,0 +1,36 @@
+Each entry in the list has the restaurant name, the number of stars and the location? How do we get location? Maybe seed the DB with a yelp call for 40 restaurants around our general area. 
+
+
+
+
+
+MVP = 
+
+Landing page with the tabs, really nice UI here
+  - user lands on landing page, sees tabs with popular topics, the default tab is "All" The tabs are big letters and very obvious. Each tab shows the top 10 restaurants in that category.
+"Review" button from the restaurant list in each category tab
+be able to login and signup
+create default cohorts for user signup
+be able to post anonymously
+Be able to create a new restaurant and add it to a category
+Have a nice UI with stars for rating. 
+No search function, just tabs. 
+Add restaurant button on home page. 
+Categories need to be seeded and working, they are set to default values like: (pizza, sushi, chinese, burgers, sandwhiches, mexican, other yummy goodness) Main topic is Food for now.  
+Have add restaurant button from bottom of tab / list
+Did i mention a clean ass UI? 
+Database needs to be seeded with the most popular restaurants we have been to. 
+
+Nice to have = 
+
+
+
+the "other yummy goodness tab" has a dropdown in it where you can pick your category and we show you the results from it. 
+Recommendations from yelp? (this is in the case that a category has less than optimal results.)
+Add to my wishlist - must be logged in for this. 
+
+
+Dreams = 
+
+Google maps api would be dope to find the location of the restaurants. 
+Would be cool to have a "discover random" button which runs the yelp api and returns a random 10, 4-5 star restaurants around your vicinity.
