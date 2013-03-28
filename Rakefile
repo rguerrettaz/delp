@@ -124,6 +124,9 @@ task "console" do
 end
 
 desc "Run the specs"
-RSpec::Core::RakeTask.new(:spec)
+task "run rspec" do
+  RSpec::Core::RakeTask.new(:spec)
+end
+
 
 task :default  => :specs

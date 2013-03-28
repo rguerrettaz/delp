@@ -1,0 +1,11 @@
+<% if @restaurant %>
+<h1><%= @restaurant.name %></h1>
+
+<ul>
+  <li>Address: <%= @restaurant.address %></li>
+  <li>Website: <%= @restaurant.website %></li>
+  <li>Hours: <%= @restaurant.hours %></li>
+  <li>Price Range: <%= @restaurant.price_range %></li>
+  <li>Phone Number: <%= @restaurant.phone_number %></li>
+</ul>
+<% end %>

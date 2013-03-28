@@ -1,0 +1,24 @@
+<nav id="main">
+  <div class="logo">
+    <a href="/"><img src ="#"></a>
+  </div>
+  <div class="right-nav">
+  
+
+    <div class="links">
+      <ul>
+        <% if session[:id] %>
+          <li><a href="/users/profile">profile</a></li>
+          <li><a href="/users/logout">logout</a></li>
+        <% else %> 
+          <li><a class="dropdown" id="login" href="/users/login">login</a>
+              
+          </li>
+          <li>
+                <a class="dropdown" id="signup" href="/users/signup">signup</a>
+           </li>
+        <%end %>
+      </ul>
+    </div>
+  </div>
+</nav>
