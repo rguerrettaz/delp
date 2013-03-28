@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/main.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/form_validations.js"></script>
+  <script src="/js/application.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+
+
+  <title>Good Eats Around DBC!</title>
+</head>
+<body>
+    <div>  
+      <%= erb :"partials/_nav" %>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <div>
+      <%= erb :"partials/_footer" %>
+    </div>
+  </body>
+</html>
