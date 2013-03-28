@@ -17,7 +17,6 @@ class User < ActiveRecord::Base
   validates :email, :uniqueness => true, :presence => true, format: { :with => VALID_EMAIL_REGEX } 
   validates :username, :uniqueness => true, :presence => true
 
-
   def password
     @password ||= Password.new(password_hash)
   end
@@ -26,5 +25,4 @@ class User < ActiveRecord::Base
     @password = Password.create(new_password)
     self.password_hash = @password
   end
-
 end
