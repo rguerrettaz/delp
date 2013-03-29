@@ -1,0 +1,15 @@
+<h1> Review <%= @restaurant.name %></h1>
+<form action="/write_review" method="post">
+  
+  <input type="hidden" name="review[restaurant_id]" value="<%= @restaurant.id %>">
+  <input type="hidden" name="review[user_id]" value=nil>
+  <% if @user %>
+    <input type="hidden" name="user_name" value="<%= @user.username %>">
+  <% else %>
+    <input type="text" name="review[user_name]" placeholder="Enter your name"><br>
+  <% end %>
+  <input type="text" name="review[rating]" placeholder="Rating"><br>
+  Write your review!<br><textarea type="text" name="review[content]" placeholder="Insert rant here"></textarea><br>
+  <input type="text" name="review[price_range]" placeholder="Price Range"><br>
+  <input type="submit" value="submit">
+</form>

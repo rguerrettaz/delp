@@ -4,6 +4,15 @@
   <input type="text" name="username" placeholder="Username">
   <input type="email" name="email"  placeholder="Email">
   <input type="password" name="password" placeholder="Password">
+  <% if @cohorts %>
+    Cohort:  
+    <select name="cohort_id">
+      <option value="" disabled="disabled" selected="selected">Choose your cohort</option>
+    <% @cohorts.each do |cohort| %>
+      <option value="<%= cohort.id %>" name="cohort_id"><%= cohort.name %></option>
+    <% end %>
+    </select> 
+  <% end %>
   <input type="submit" value="Signup!">
 </form>
 

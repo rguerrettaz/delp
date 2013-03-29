@@ -1,0 +1,108 @@
+.landing-container{
+  position: relative;
+  display: block;
+  margin: 40px auto;
+  border-radius: 15px;
+  /*border: solid 1px #ccc;*/
+  width: 920px;
+  padding: 30px;
+
+}
+
+.restaurants-list{
+  width: 900px;
+
+}
+
+/************************ Navbar ************************/
+
+nav#main {
+  padding: 20px 0px;
+  height: 60px;
+}
+
+nav#main .logo {
+  padding-left: 40px;
+  float: left;
+  width: 400px;
+  height: 60px;
+  display:block;
+  margin-top: -20px;
+}
+
+nav#main .right-nav {
+  float: right;
+}
+
+nav#main .search {
+  /*float: left;*/
+  /*width: 40%;*/
+  /*display: inline-block;*/
+  margin: 0px auto;
+  margin-top: 70px;
+  text-align: center;
+}
+
+nav#main .avatar {
+  float: left;
+}
+
+nav#main .links {
+  float: left;
+}
+
+nav#main ul {
+  display:inline;
+  float: right;
+  padding-right: 40px;
+  margin-right:70px;
+  padding-left: 20px;
+}
+
+nav#main ul li {
+  display: inline;
+}
+
+nav#main ul li a {
+  font-family: Helvetica;
+  font-weight: bold;
+  font-variant: small-caps;
+  text-decoration: none;
+  padding-right: 10px;
+  font-size: 1.2em;
+  color: #606e67;
+  
+}
+
+nav#main ul li a:hover {
+  color: #CD1300;
+} 
+
+
+/************************ JQuery UI hacks here ************************/
+
+
+#tabs { 
+    padding: 0px; 
+    background: none; 
+    border-width: 0px; 
+} 
+#tabs .ui-tabs-nav { 
+    padding-left: 0px; 
+    background: transparent; 
+    border-width: 0px 0px 1px 0px; 
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    border-radius: 0px; 
+} 
+#tabs .ui-tabs-panel { 
+    /*background: #eeeeee repeat-x scroll 50% top; */
+    /*border-width: 1px 1px 1px 1px; */
+    border: 1px solid #dddddd;
+  }
+
+ .restaurant-list-item {
+    border: 1px solid #dddddd;
+    margin: 15px 0px;
+    border-radius: 6px;
+  }

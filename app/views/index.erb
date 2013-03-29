@@ -1,2 +1,45 @@
+<div class="landing-container">
+  <div class="restaurants-list">
+    <div id="tabs">
+      <ul>
+        <li><a href="#tabs-1">All</a></li>
+        <li><a href="#tabs-2">Mexican</a></li>
+        <li><a href="#tabs-3">Chinese</a></li>
+        <li><a href="#tabs-4">Sandwiches</a></li>
+        <li><a href="#tabs-5">Sushi</a></li>
+        <li><a href="#tabs-5">Burgers</a></li>
+        <li><a href="#tabs-7">Ethnic</a></li>
+        <li><a href="#tabs-8">Other eats</a></li>
+
+      </ul>
+      <div id="tabs-1">
+        <%= erb :'/partials/_restaurant_items' %>
+      </div>
+      <div id="tabs-2">
+      </div>
+      <div id="tabs-3">
+      </div>
+      <div id="tabs-4">
+      </div>
+      <div id="tabs-5">
+      </div>
+      <div id="tabs-6">
+      </div>
+      <div id="tabs-7">
+      </div>
+      <div id="tabs-8">
+      </div>
+    </div>
+
+
+
 <button ><a href="/restaurants/create">Create New Restaurant</a></button>
+<% if @restaurants %>
+  <div class="restuarant-list">
+    
+        
+  </div>
+  <% end %>
+</div>
+</div>
 

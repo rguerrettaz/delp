@@ -1,9 +1,18 @@
 <form action="/restaurants/create" method="post">
-  <input type="text" name="restaurant[:name]" placeholder="Restaurant Name">
-  <input type="text" name="restaurant[:website]" placeholder="Website">
-  <input type="text" name="restaurant[:address]" placeholder="Address">
-  <input type="text" name="restaurant[:phone_number]" placeholder="Phone Number">
-  <input type="text" name="restaurant[:price_range]" placeholder="Price Range (1-3)">
-  <input type="text" name="restaurant[:hours]" placeholder="Hours Ex: \'9-5\'">
+  <input type="text" name="restaurant[name]" placeholder="Restaurant Name">
+  <input type="text" name="restaurant[website]" placeholder="Website">
+  <input type="text" name="restaurant[address]" placeholder="Address">
+  <input type="text" name="restaurant[phone]" placeholder="Phone Number">
+  <input type="text" name="restaurant[price_range]" placeholder="Price Range (1-3)">
+  <input type="text" name="restaurant[hours]" placeholder="Hours Ex: \'9-5\'">
+  <% if @categories %>
+    Category: 
+    <select name="category">
+      <option value="" disabled="disabled" selected="selected">Please select a category</option>
+    <% @categories.each do |category| %>
+      <option value="<%= category.name %>" name="category"><%= category.name %></option>
+    <% end %>
+    </select> 
+  <% end %>
   <input type="submit" value="submit">
 </form>

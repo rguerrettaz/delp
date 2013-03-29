@@ -1,24 +1,29 @@
 <nav id="main">
   <div class="logo">
-    <a href="/"><img src ="#"></a>
+    <a href="/"><img src ="/images/delp_copy.png"></a>
   </div>
-  <div class="right-nav">
-  
 
-    <div class="links">
+  <div class="right-nav">
+        <div class="links">
       <ul>
         <% if session[:id] %>
           <li><a href="/users/profile">profile</a></li>
           <li><a href="/users/logout">logout</a></li>
         <% else %> 
-          <li><a class="dropdown" id="login" href="/users/login">login</a>
-              
+          <li>
+            <a class="dropdown" id="login" href="/users/login">login</a>
           </li>
           <li>
-                <a class="dropdown" id="signup" href="/users/signup">signup</a>
-           </li>
+            <a class="dropdown" id="signup" href="/users/signup">signup</a>
+          </li>
         <%end %>
       </ul>
     </div>
+  </div>
+    <div class="search">
+    <form action="/search" method="post">
+      <input type="text" name="search_term" placeholder="Search for a Restaurant">
+      <input type="button" value="Search">
+    </form>
   </div>
 </nav>

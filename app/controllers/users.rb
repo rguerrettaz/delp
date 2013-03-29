@@ -1,4 +1,5 @@
 get '/users/signup' do
+  @cohorts = Cohort.all
   erb :signup
 end
 
