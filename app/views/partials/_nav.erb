@@ -6,19 +6,21 @@
   <div class="right-nav">
         <div class="links">
       <ul>
-        <% if @home_nav %>
-          <%= erb :'/partials/_main_nav' %>
-        <% else %>
-          <li><a href="/">home</a></li>
-          <%= erb :'/partials/_main_nav' %>
-        <% end %>
+        <li><a href="/">home</a></li>
+        <% if session[:id] %>
+          <li><a href="/users/profile">profile</a></li>
+          <li><a href="/users/logout">logout</a></li>
+        <% else %> 
+          <li><a href="/users/login">login</a></li>
+          <li><a href="/users/signup">signup</a></li>
+        <%end %>
       </ul>
     </div>
   </div>
-    <div class="search">
+  <div class="search">
     <form action="/search" method="post">
-      <input type="text" name="search_term" placeholder="Search for a Restaurant">
-      <input type="button" value="Search">
+      <input type="text" name="search_term" <% if @search_term != '' %> value="<%= @search_term %>" <% else %> placeholder="Search for a Restaurant" <% end %>>
+      <input type="submit" value="Search">
     </form>
   </div>
 </nav>

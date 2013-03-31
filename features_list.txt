@@ -7,21 +7,36 @@ Each entry in the list has the restaurant name, the number of stars and the loca
 MVP = 
 
 pagination
-search gem
+UI - need stars to show on landing page, and on restaurant page
+UI - clean the restaurant and landing page format
+LANDING - Seed all tabs with some restaurants
+PROFILE - make a simple profile page  (your reviews list)
+
 Landing page with the tabs, really nice UI here
   - user lands on landing page, sees tabs with popular topics, the default tab is "All" The tabs are big letters and very obvious. Each tab shows the top 10 restaurants in that category.
-"Review" button from the restaurant list in each category tab
-DONE - be able to login and signup
+
+sign-in popup on review page. 
+Sign-in pop on create restaurant page??? Or allow anonymous creation for restaurants too. 
 create default cohorts for user signup
-be able to post anonymously
-Be able to create a new restaurant and add it to a category
-Have a nice UI with stars for rating. 
-No search function, just tabs. 
-Add restaurant button on home page. 
-Categories need to be seeded and working, they are set to default values like: (pizza, sushi, chinese, burgers, sandwhiches, mexican, other yummy goodness) Main topic is Food for now.  
+
+
 Have add restaurant button from bottom of tab / list
 Did i mention a clean ass UI? 
 Database needs to be seeded with the most popular restaurants we have been to. 
+
+
+
+
+DONE - search gem
+DONE - be able to login and signup
+DONE - "Review" button from the restaurant list in each category tab
+DONE - Categories need to be seeded and working, they are set to default values like: (pizza, sushi, chinese, burgers, sandwhiches, mexican, other yummy goodness) Main topic is Food for now. 
+DONE - Add restaurant button on home page. 
+DONE - Have a nice UI with stars for rating. 
+DONE- Be able to create a new restaurant and add it to a category
+DONE - be able to post anonymously
+
+
 
 Nice to have = 
 

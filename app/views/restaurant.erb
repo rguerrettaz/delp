@@ -1,8 +1,10 @@
+<div class="restaurant-info">
 <h1>yay! You made it!</h1>
 <% if @restaurant %>
 <h1><%= @restaurant.name %></h1>
 
 <ul>
+  <li>Rating: <%= @rating %></li>
   <li>Address: <%= @restaurant.address %></li>
   <li>Website: <%= @restaurant.website %></li>
   <li>Hours: <%= @restaurant.hours %></li>
@@ -12,3 +14,4 @@
 <% end %>
 
 <button class="write-review"><a href="/write_review/<%= @restaurant.id %>">Write Review!</a></button>
+</div>

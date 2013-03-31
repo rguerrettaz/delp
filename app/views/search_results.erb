@@ -1,0 +1,21 @@
+<div class="search_results">
+  <% if @results == [nil] || @results == nil %>
+    <% if @search_term == '' %>
+      <p>Please enter a restaurant to search for.</p>
+      <span class="or"> OR </span>
+      <%= erb :'partials/_new_rest_btn' %>
+    <% else %>
+      <p>Could not find: '<%= @search_term %>'</p>
+      <p>Please add the restaurant to our database! ...or... search again</p>
+      <%= erb :'partials/_new_rest_btn' %>
+    <% end %>
+  <% else %>
+    <% @results.each do |result| %>
+      <div class="search-results">
+        <a href="/restaurants/id/<%= result.id %>"><%= result.name.capitalize %></a>
+      </div>
+    <% end %>
+    <p>Didn't find the restaurant you were looking for? Create your own!</p>
+    <%= erb :'partials/_new_rest_btn' %>
+  <% end %>
+</div>

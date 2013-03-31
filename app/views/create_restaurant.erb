@@ -5,8 +5,7 @@
   <input type="text" name="restaurant[website]" placeholder="Website"><br>
   <input type="text" name="restaurant[address]" placeholder="Address"><br>
   <input type="text" name="restaurant[phone]" placeholder="Phone Number"><br>
-  <input type="text" name="restaurant[price_range]" placeholder="Price Range (1-3)"><br>
-  <input type="text" name="restaurant[hours]" placeholder="Hours Ex: \'9-5\'"><br>
+  <input type="text" name="restaurant[hours]" placeholder="Hours (ex: Mon-Fri 9-5)"><br>
   </div>
   <% if @categories %>
     <select name="category">
@@ -16,7 +15,6 @@
     <% end %>
     </select> <br>
   <% end %>
-
   <input type="submit" class="submit-btn" value="Create Restaurant!">
 </form>
 </div>

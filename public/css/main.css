@@ -96,13 +96,15 @@ nav#main ul li a:hover {
 } 
 
 
-/************************ Create Review && Restaurant pages ************************/
+/************************ Forms && such ************************/
 
 .create-review,
 .create-restaurant,
 .signup,
-.login {
-  background-color: #eeeeee;
+.login,
+.search_results,
+.restaurant-info {
+  background-color: #F6F6F6;
   margin: 70px auto;
   width: 700px;
   display: block;
@@ -269,7 +271,7 @@ select {
   border: 1px solid #dddddd;
   margin: 15px 0px;
   border-radius: 6px;
-  background-color: #eeeeee;
+  background-color: #F6F6F6;
   padding: 20px;
   -moz-column-count: 3;
   -webkit-column-count: 3;

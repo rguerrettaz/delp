@@ -1,5 +1,5 @@
 <div class="create-review">
-  <h1> Review <%= @restaurant.name %></h1>
+  <h1> Review <%= @restaurant.name.capitalize %></h1>
   <form action="/write_review" method="post" class="review-form">
     <input type="hidden" name="review[restaurant_id]" value="<%= @restaurant.id %>">
     <input type="hidden" name="review[user_id]" value=nil>

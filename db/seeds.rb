@@ -11,8 +11,8 @@ Category.create(topic_id: 1, name: "Other")
 
 
 
-Restaurant.create(name: "Pasilla", address: "359 Kearny St", phone: "(415) 989-8077", hours: "Mon-Fri 10 am - 8 pm", price_range: 1 )
-Restaurant.create(name: "Chipotle", address: "211 Sutter St", phone: "(415) 590-4199", hours: "Mon-Sun 11 am - 10 pm", price_range: 1, website: "http://www.chipotle.com/" )
+Restaurant.create(name: "pasilla", address: "359 Kearny St", phone: "(415) 989-8077", hours: "Mon-Fri 10 am - 8 pm", price_range: 1 )
+Restaurant.create(name: "chipotle", address: "211 Sutter St", phone: "(415) 590-4199", hours: "Mon-Sun 11 am - 10 pm", price_range: 1, website: "http://www.chipotle.com/" )
 
 Cohort.create(name: "Sea Lions")
 Cohort.create(name: "Banana Slugs")

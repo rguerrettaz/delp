@@ -1,4 +1,4 @@
-get '/restaurants/create' do 
+get '/restaurants/create' do
   @categories = Category.all
   erb :create_restaurant
 end
@@ -11,6 +11,7 @@ end
 
 get '/restaurants/id/:id' do
   get_restaurant_with_memcache()
+  @rating = Review.where("restaurant_id = ?", @restaurant.id).average("rating") #find average score
   erb :restaurant
 end
 
@@ -21,8 +22,14 @@ get '/write_review/:id' do
 end
 
 post '/write_review' do
-  p params
-  puts '*' *300
   create_review(params[:review])
   redirect '/'
+end
+
+post '/search' do
+  @search_term = params[:search_term]
+  p @results = search_results(@search_term)
+  puts '*' * 300
+  @results
+  erb :search_results
 end

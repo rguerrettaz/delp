@@ -1,6 +1,6 @@
 <% @restaurants.each do |restaurant| %>
   <div class="restaurant-list-item"> 
-    <h4><a href="/restaurants/id/<%= restaurant.id %>"><%= restaurant.name %></a></h4>
+    <h4><a href="/restaurants/id/<%= restaurant.id %>"><%= restaurant.name.capitalize %></a></h4>
     <p> <%= restaurant.address %></p>
     <p><%= restaurant.website %></p>
     <p><%= restaurant.hours %></p>
