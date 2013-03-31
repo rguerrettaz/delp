@@ -1,3 +1,10 @@
+/************************ Landing Page ************************/
+
+.container {
+  display: block;
+  min-height: 550px;
+}
+
 .landing-container{
   position: relative;
   display: block;
@@ -11,7 +18,19 @@
 
 .restaurants-list{
   width: 900px;
+}
 
+.landing-btn {
+  display: block;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 7px;
+  margin: 20px auto;
+}
+
+.landing-btn a {
+  text-decoration: none;
+  color: #222;
 }
 
 /************************ Navbar ************************/
@@ -19,6 +38,7 @@
 nav#main {
   padding: 20px 0px;
   height: 60px;
+  margin-bottom: 50px;
 }
 
 nav#main .logo {
@@ -35,9 +55,6 @@ nav#main .right-nav {
 }
 
 nav#main .search {
-  /*float: left;*/
-  /*width: 40%;*/
-  /*display: inline-block;*/
   margin: 0px auto;
   margin-top: 70px;
   text-align: center;
@@ -70,13 +87,159 @@ nav#main ul li a {
   text-decoration: none;
   padding-right: 10px;
   font-size: 1.2em;
-  color: #606e67;
+  color: #666666;
   
 }
 
 nav#main ul li a:hover {
   color: #CD1300;
 } 
+
+
+/************************ Create Review && Restaurant pages ************************/
+
+.create-review,
+.create-restaurant,
+.signup,
+.login {
+  background-color: #eeeeee;
+  margin: 70px auto;
+  width: 700px;
+  display: block;
+  padding: 30px;
+  border: 1px solid #dddddd;
+  border-radius: 7px;
+}
+
+.create-review h1, h3 {
+  margin-top: 0;
+}
+
+.create-review span {
+    margin: 10px 0;
+}
+
+.create-review textarea {
+  width: 500px;
+  height: 150px;
+  margin-top: 10px;
+}
+
+form input {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.login form input[type=email],
+.login form input[type=password],
+.signup form input[type=email],
+.signup form input[type=password],
+.signup form input[type=text],
+select  {
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+select {
+  margin-top: 20px;
+}
+
+.create-restaurant .restaurant-fields {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+
+}
+
+.create-restaurant form input[type=text] {
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/************************ Star Rating ************************/
+
+.rating {
+  overflow: hidden;
+  display: inline-block;
+  width: 140px;
+  padding-bottom: 10px;
+}
+
+.rating-input {
+  position: absolute;
+  left: 0;
+  top: -50px;
+}
+
+.rating:hover .rating-star:hover,
+.rating:hover .rating-star:hover ~ .rating-star,
+.rating-input:checked ~ .rating-star  {
+  background-position: 0 -32px;
+}
+
+.rating-star,
+.rating:hover .rating-star {
+  float: right;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url('/images/star.gif') 0 0px;
+}
+
+
+/************************ Dollar Rating ************************/
+
+.price-range {
+  overflow: hidden;
+  display: inline-block;
+  width: 160px;
+  padding-top: 20px;
+}
+
+.price-range-input {
+  position: absolute;
+  left: 0;
+  top: -50px;
+}
+
+.price-range:hover .price-range-star:hover,
+.price-range:hover .price-range-star:hover ~ .price-range-star,
+.price-range-input:checked ~ .price-range-star  {
+  background-position: 0 0px;
+}
+
+.price-range-star,
+.price-range:hover .price-range-star {
+  float: right;
+  display: block;
+  width: 20px;
+  height: 25px;
+  background: url('/images/dollar-bills3.png') 22px 0px;
+}
+
+.submit-btn {
+  border: none;
+  display: block;
+  margin: 20px auto;
+  border-radius: 7px;
+  /*background-color: blue;*/
+/*  min-width: 160px;
+*/  font-size: 24px;
+  padding: 10px 20px;
+}
+
+.submit-btn:hover {
+  background: rgb(200,18,0); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(200,18,0,1) 0%, rgba(163,0,0,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(200,18,0,1)), color-stop(100%,rgba(163,0,0,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(200,18,0,1) 0%,rgba(163,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(200,18,0,1) 0%,rgba(163,0,0,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(200,18,0,1) 0%,rgba(163,0,0,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(200,18,0,1) 0%,rgba(163,0,0,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c81200', endColorstr='#a30000',GradientType=0 ); /* IE6-9 */
+}
 
 
 /************************ JQuery UI hacks here ************************/
@@ -99,10 +262,32 @@ nav#main ul li a:hover {
     /*background: #eeeeee repeat-x scroll 50% top; */
     /*border-width: 1px 1px 1px 1px; */
     border: 1px solid #dddddd;
+    padding: 20px 30px;
   }
 
- .restaurant-list-item {
-    border: 1px solid #dddddd;
-    margin: 15px 0px;
-    border-radius: 6px;
-  }
+.restaurant-list-item {
+  border: 1px solid #dddddd;
+  margin: 15px 0px;
+  border-radius: 6px;
+  background-color: #eeeeee;
+  padding: 20px;
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+}
+
+ {
+  padding: 50px;
+}
+
+
+/************************ Footer ************************/
+
+footer {
+  position: relative;
+  clear: both;
+  padding: 20px;
+  width: 100%;
+  height: 50px;
+  display: block;
+  text-align: center;
+}

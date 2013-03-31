@@ -1,18 +1,18 @@
 <%= erb :"partials/_errors", layout: false, locals: { errors: @errors } %>
-
-<form action="/users/signup" method="post" class="signup">
-  <input type="text" name="username" placeholder="Username">
-  <input type="email" name="email"  placeholder="Email">
-  <input type="password" name="password" placeholder="Password">
-  <% if @cohorts %>
-    Cohort:  
+<div class="signup">
+<form action="/users/signup" method="post" class="signup-form">
+  <input type="text" name="username" placeholder="Username"><br>
+  <input type="email" name="email"  placeholder="Email"><br>
+  <input type="password" name="password" placeholder="Password"><br>
+  <% if @cohorts %> 
     <select name="cohort_id">
       <option value="" disabled="disabled" selected="selected">Choose your cohort</option>
     <% @cohorts.each do |cohort| %>
       <option value="<%= cohort.id %>" name="cohort_id"><%= cohort.name %></option>
     <% end %>
-    </select> 
+    </select> <br>
   <% end %>
-  <input type="submit" value="Signup!">
+  <input type="submit" class="submit-btn" value="Sign up!">
 </form>
 
+</div>

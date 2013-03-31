@@ -20,6 +20,8 @@ require "sinatra/reloader" if development?
 
 require 'erb'
 require 'bcrypt'
+require 'memcached'
+require 'text'
 
 
 # Some helper constants for path-centric logic
@@ -33,3 +35,6 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
+
+# memcache server started with this command: "memcached -p 11211 &"
+MC = Memcached.new("localhost:11211") 

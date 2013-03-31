@@ -6,6 +6,8 @@ Each entry in the list has the restaurant name, the number of stars and the loca
 
 MVP = 
 
+pagination
+search gem
 Landing page with the tabs, really nice UI here
   - user lands on landing page, sees tabs with popular topics, the default tab is "All" The tabs are big letters and very obvious. Each tab shows the top 10 restaurants in that category.
 "Review" button from the restaurant list in each category tab
@@ -23,8 +25,7 @@ Database needs to be seeded with the most popular restaurants we have been to.
 
 Nice to have = 
 
-
-
+carrierwave
 the "other yummy goodness tab" has a dropdown in it where you can pick your category and we show you the results from it. 
 Recommendations from yelp? (this is in the case that a category has less than optimal results.)
 Add to my wishlist - must be logged in for this. 

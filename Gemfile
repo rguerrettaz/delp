@@ -15,6 +15,8 @@ gem 'activerecord'
 
 gem 'rake'
 gem 'bcrypt-ruby'
+gem 'memcached'
+gem 'text'
 
 group :test do
   gem 'faker'
