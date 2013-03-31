@@ -15,7 +15,7 @@ gem 'activerecord'
 
 gem 'rake'
 gem 'bcrypt-ruby'
-gem 'memcached'
+# gem 'memcached'
 gem 'text'
 
 group :test do

@@ -20,7 +20,7 @@ require "sinatra/reloader" if development?
 
 require 'erb'
 require 'bcrypt'
-require 'memcached'
+# require 'memcached'
 require 'text'
 
 
