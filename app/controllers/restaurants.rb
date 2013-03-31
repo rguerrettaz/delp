@@ -1,35 +1,49 @@
 get '/restaurants/create' do
+  @restaurant_id = Restaurant.last.id + 1
   @categories = Category.all
+  @user = current_user
   erb :create_restaurant
 end
 
 post '/restaurants/create' do
   rest = create_restaurant(params)
-  MC.set(rest.id.to_s, rest)
+  begin
+    MC.set(rest.id.to_s, rest)
+  rescue
+  end
+  create_review(params[:review])
   redirect 'restaurants/id/' + rest.id.to_s
 end
 
 get '/restaurants/id/:id' do
   get_restaurant_with_memcache()
-  @rating = Review.where("restaurant_id = ?", @restaurant.id).average("rating") #find average score
   erb :restaurant
 end
 
 get '/write_review/:id' do
   @user = current_user if current_user
-  get_restaurant_with_memcache()
+  @restaurant_id = get_restaurant_with_memcache().id
   erb :create_review
 end
 
-post '/write_review' do
+post '/write_review/:id' do
   create_review(params[:review])
-  redirect '/'
+  redirect 'restaurants/id/' + params[:id]
+end
+
+get '/categories/:id' do
+  if params[:id] = 0
+    @restaurants = Restaurant.all
+  else
+    @restaurants = Restaurant.where("category_id = ?", params[:id])
+  end
+  erb :categories
 end
 
 post '/search' do
   @search_term = params[:search_term]
-  p @results = search_results(@search_term)
-  puts '*' * 300
-  @results
+  @results = search_results(@search_term)
+  p @results
+  puts '*' *300
   erb :search_results
 end

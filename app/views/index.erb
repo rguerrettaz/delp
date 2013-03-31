@@ -7,27 +7,34 @@
         <li><a href="#tabs-3">Chinese</a></li>
         <li><a href="#tabs-4">Sandwiches</a></li>
         <li><a href="#tabs-5">Sushi</a></li>
-        <li><a href="#tabs-5">Burgers</a></li>
+        <li><a href="#tabs-6">Burgers</a></li>
         <li><a href="#tabs-7">Ethnic</a></li>
         <li><a href="#tabs-8">Other eats</a></li>
 
       </ul>
       <div id="tabs-1">
-        <%= erb :'/partials/_restaurant_items' %>
+        <%= erb :'/partials/_all_rests' %>
       </div>
       <div id="tabs-2">
+        <%= erb :'/partials/_mex_rests' %>
       </div>
       <div id="tabs-3">
+        <%= erb :'/partials/_chinese_rests' %>
       </div>
       <div id="tabs-4">
+        <%= erb :'/partials/_sandwich_rests' %>
       </div>
       <div id="tabs-5">
+        <%= erb :'/partials/_sushi_rests' %>
       </div>
       <div id="tabs-6">
+        <%= erb :'/partials/_burger_rests' %>
       </div>
       <div id="tabs-7">
+        <%= erb :'/partials/_ethnic_rests' %>
       </div>
       <div id="tabs-8">
+        <%= erb :'/partials/_other_rests' %>
       </div>
     </div>
     <button class="landing-btn"><a href="/restaurants/create">Create New Restaurant</a></button>

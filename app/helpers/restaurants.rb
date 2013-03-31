@@ -1,14 +1,21 @@
 helpers do
   def create_restaurant(params)
+    params[:restaurant][:name].downcase!
     restaurant = Restaurant.create(params[:restaurant])
-    restaurant.categories << Category.find_by_name(params[:category])
+    restaurant.category_id = Category.find_by_name(params[:category]).name
     session[:restaurant_id] = restaurant.id
     return restaurant
   end
 
   def create_review(params)
-    params[:user_id] = current_user.id if current_user
     @review = Review.create(params)
+    update_restaurant_rating(params[:restaurant_id])
+  end
+
+  def update_restaurant_rating(id)
+    rest = Restaurant.find(id)
+    rest.rating = Review.where("restaurant_id = ?", rest.id).average("rating")
+    rest.save
   end
 
   def get_restaurant_with_memcache
@@ -20,30 +27,4 @@ helpers do
     end 
   end
 
-  def search_results(term)
-    results = []
-    results << Restaurant.find_by_name(term.downcase)
-
-    if results == [nil]
-      results = []
-      # Levenshtein distance
-      max_distance = 4
-      results += levenshtein_calculator(term)
-      results += Restaurant.where("name like ?", "%#{term.downcase}%")
-
-      results.uniq!
-    end
-    results
-  end
-  def levenshtein_calculator(term)
-    results = []
-    restaurants = Restaurant.all
-    max_distance = 4
-    restaurants.each do |restaurant|
-      if Text::Levenshtein.distance(restaurant.name, term) < max_distance
-        results << restaurant
-      end
-    end
-    return results.sort_by{|rest| Text::Levenshtein.distance(rest.name, term)}
-  end
 end

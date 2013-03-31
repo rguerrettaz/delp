@@ -1,32 +1,25 @@
 Each entry in the list has the restaurant name, the number of stars and the location? How do we get location? Maybe seed the DB with a yelp call for 40 restaurants around our general area. 
 
 
-
-
-
 MVP = 
 
-pagination
-UI - need stars to show on landing page, and on restaurant page
-UI - clean the restaurant and landing page format
-LANDING - Seed all tabs with some restaurants
-PROFILE - make a simple profile page  (your reviews list)
-
-Landing page with the tabs, really nice UI here
-  - user lands on landing page, sees tabs with popular topics, the default tab is "All" The tabs are big letters and very obvious. Each tab shows the top 10 restaurants in that category.
-
-sign-in popup on review page. 
-Sign-in pop on create restaurant page??? Or allow anonymous creation for restaurants too. 
-create default cohorts for user signup
+DATABASE - Database needs to be seeded with the most popular restaurants we have been to.
+CATEGORY - make a category page that shows all restaurants for a given category
+CATEGORY - pagination for more than 10. 
+LANDING & RESTAURANT - need stars and price range to show on landing page, and on restaurant page
+LANDING & RESTAURANT- clean the restaurant and landing page format
+RESTAURANT - show the top 5 reviews pagination for more than 5.
+PROFILE - make a simple profile page (your reviews list)
+ERRORS - signup, login, review, create_rest, 
+POPUP - signin popup on review page 
+POPUP - sign-in pop on create restaurant page??? Or allow anonymous creation for restaurants too. 
 
 
-Have add restaurant button from bottom of tab / list
-Did i mention a clean ass UI? 
-Database needs to be seeded with the most popular restaurants we have been to. 
-
-
-
-
+DONE - LANDING - tabs show only their categories (write queries for this)
+DONE - LANDING - show top 10, button at bottom to "see more" pagination
+DONE - LANDING - Seed all tabs with some restaurants
+DONE - LANDING - sort by highest rated
+DONE - create default cohorts for user signup
 DONE - search gem
 DONE - be able to login and signup
 DONE - "Review" button from the restaurant list in each category tab
@@ -40,6 +33,7 @@ DONE - be able to post anonymously
 
 Nice to have = 
 
+edit your reviews functionality
 carrierwave
 the "other yummy goodness tab" has a dropdown in it where you can pick your category and we show you the results from it. 
 Recommendations from yelp? (this is in the case that a category has less than optimal results.)

@@ -1,4 +1,5 @@
-<div class="restaurant-list-item"> 
+<% @restaurants[0..9].each do |restaurant| %>
+  <div class="restaurant-list-item"> 
     <h4><a href="/restaurants/id/<%= restaurant.id %>"><%= restaurant.name.capitalize %></a></h4>
     <p><%= restaurant.rating %></p>
     <p><%= restaurant.address %></p>
@@ -7,4 +8,7 @@
     <p><%= restaurant.price_range %></p>
     <p><%= restaurant.phone %></p>
     <a href="/write_review/<%= restaurant.id %>">Write Review!</a>
-</div>
+  </div>
+<% end %>
+<a href="categories/0">See more!</a>
+

@@ -103,7 +103,8 @@ nav#main ul li a:hover {
 .signup,
 .login,
 .search_results,
-.restaurant-info {
+.restaurant-info,
+.restaurant-list-category {
   background-color: #F6F6F6;
   margin: 70px auto;
   width: 700px;
@@ -222,13 +223,11 @@ select {
 }
 
 .submit-btn {
-  border: none;
+  border: 1px solid #999999;
   display: block;
   margin: 20px auto;
   border-radius: 7px;
-  /*background-color: blue;*/
-/*  min-width: 160px;
-*/  font-size: 24px;
+  font-size: 24px;
   padding: 10px 20px;
 }
 

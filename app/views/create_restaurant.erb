@@ -1,5 +1,6 @@
 <div class="create-restaurant">
 <form action="/restaurants/create" method="post">
+  <fieldset>
   <div class="restaurant-fields">
   <input type="text" name="restaurant[name]" placeholder="Restaurant Name"><br>
   <input type="text" name="restaurant[website]" placeholder="Website"><br>
@@ -15,6 +16,10 @@
     <% end %>
     </select> <br>
   <% end %>
+</fieldset>
+<fieldset>
+  <%= erb :'partials/_review_fields' %>
+</fieldset>
   <input type="submit" class="submit-btn" value="Create Restaurant!">
 </form>
 </div>

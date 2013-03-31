@@ -1,3 +1,4 @@
+<% @sushi_rests[0..9].each do |restaurant| %>
 <div class="restaurant-list-item"> 
     <h4><a href="/restaurants/id/<%= restaurant.id %>"><%= restaurant.name.capitalize %></a></h4>
     <p><%= restaurant.rating %></p>
@@ -8,3 +9,7 @@
     <p><%= restaurant.phone %></p>
     <a href="/write_review/<%= restaurant.id %>">Write Review!</a>
 </div>
+<% end %>
+<a href="categories/4">See more!</a>
+
+
